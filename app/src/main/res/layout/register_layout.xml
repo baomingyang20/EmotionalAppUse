@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackground"
+    tools:context=".loginframe.RegisterActivity">
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/login_progress"-->
+        <!--style="?android:attr/progressBarStyleLarge"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:visibility="gone" />-->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:text="欢迎注册"
+            android:textColor="#6e6d6d"
+            android:textSize="30dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/inputphone"
+            android:layout_width="250dp"
+            android:layout_height="42dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="30dp"
+            android:hint="  请 输 入 手 机 号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="15dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/inputpassword"
+            android:layout_width="250dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/inputphone"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp"
+            android:hint="  请 输 入 密 码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="15dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/inputpasswordagain"
+            android:layout_width="250dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/inputpassword"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp"
+            android:hint="  请 再 次 输 入 密 码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="15dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/sex_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputpasswordagain"
+            android:layout_alignStart="@+id/inputpassword"
+            android:layout_alignLeft="@+id/inputpassword"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/man_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/man" />
+
+            <RadioButton
+                android:id="@+id/woman_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/woman" />
+        </RadioGroup>
+
+        <AutoCompleteTextView
+            android:id="@+id/inputage"
+            android:layout_width="250dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/sex_rg"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="15dp"
+            android:hint="  请 输 入 年 龄"
+            android:inputType="number"
+            android:maxLength="20"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="15dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/iamuser"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/inputage"-->
+            <!--android:layout_alignStart="@+id/inputpassword"-->
+            <!--android:layout_alignLeft="@+id/inputpassword"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:clickable="true" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/iamuer_text"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/inputage"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:layout_toRightOf="@id/iamuser"-->
+            <!--android:text="我是用户"-->
+            <!--android:textColor="#ffffff" />-->
+
+        <!--&lt;!&ndash;style="@style/LoginCheckBox"&ndash;&gt;-->
+        <!--<CheckBox-->
+            <!--android:id="@+id/iamteacher"-->
+
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/inputage"-->
+            <!--android:layout_marginLeft="60dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_toRightOf="@id/iamuer_text"-->
+            <!--android:clickable="true" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/inputage"-->
+            <!--android:layout_marginLeft="7dp"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:layout_toRightOf="@id/iamteacher"-->
+            <!--android:text="我是讲师"-->
+            <!--android:textColor="#ffffff" />-->
+
+        <RadioGroup
+            android:id="@+id/iden_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputage"
+            android:layout_alignStart="@+id/inputage"
+            android:layout_alignLeft="@+id/inputage"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/normal_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是用户" />
+
+            <RadioButton
+                android:id="@+id/teacher_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是讲师" />
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/iden_rg"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_shape"
+            android:text="注        册"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
